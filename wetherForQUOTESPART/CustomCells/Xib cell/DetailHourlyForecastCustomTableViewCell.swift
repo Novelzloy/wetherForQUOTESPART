@@ -35,9 +35,9 @@ extension DetailHourlyForecastCustomTableViewCell: UICollectionViewDelegate, UIC
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DetailCustomFirstCell.identifier, for: indexPath) as! DetailCustomFirstCell
-//        cell.degreeLabel.text = "10"
-//        cell.timeLabel.text  = "8"
-//        cell.imageView.image = UIImage(named: "rain")
+        cell.degreeLabel.text = "10"
+        cell.timeLabel.text  = "8"
+        cell.imageView.image = UIImage(named: "rain")
         return cell
     }
     

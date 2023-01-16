@@ -77,9 +77,9 @@ extension DetailTableViewController {
 
 extension DetailTableViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 1{
-            return 1
-        }
+//        if section == 1{
+//            return 1
+//        }
         return 8
     }
     
@@ -92,11 +92,11 @@ extension DetailTableViewController: UITableViewDelegate, UITableViewDataSource 
         }
         
         switch indexPath.row {
-        case 1:
-            let hourlyForecast = tableView.dequeueReusableCell(
-                withIdentifier: DetailHourlyForecastCustomTableViewCell.identifier,
-                for: indexPath) as! DetailHourlyForecastCustomTableViewCell
-            return hourlyForecast
+//        case 1:
+//            let hourlyForecast = tableView.dequeueReusableCell(
+//                withIdentifier: DetailHourlyForecastCustomTableViewCell.identifier,
+//                for: indexPath) as! DetailHourlyForecastCustomTableViewCell
+//            return hourlyForecast
         case 2:
             let detailCustomThirdCell = tableView.dequeueReusableCell(
                 withIdentifier: DetailCustomThirdCell.identifier,
@@ -128,10 +128,8 @@ extension DetailTableViewController: UITableViewDelegate, UITableViewDataSource 
                 for: indexPath) as! DetailCustomEighthCell
             return detailCustomEighthCell
         default:
-            break
+            return UITableViewCell()
         }
-        
-        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
